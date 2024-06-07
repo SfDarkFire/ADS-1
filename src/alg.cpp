@@ -38,7 +38,9 @@ uint64_t sumPrime(uint64_t hbound) {
     uint64_t sum = 0;
     hbound--;
     while (hbound != 0) {
-        sum += hbound;
+        if (checkPrime(hbound)) {
+            sum += hbound;
+        }
         hbound--;
     }
     return sum;
